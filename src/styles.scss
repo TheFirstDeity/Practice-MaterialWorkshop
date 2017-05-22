@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+/***************************************************************************************************
+ * MATERIAL COMPONENT THEMES
+ */
+// @import '~@angular/material/prebuilt-themes/deeppurple-amber';
+@import '~@angular/material/prebuilt-themes/indigo-pink';
+// @import '~@angular/material/prebuilt-themes/pink-bluegrey';
+// @import '~@angular/material/prebuilt-themes/purple-green';
+
+
+// CSS flex properties (rather than flex-layout) used for html & body 
+// because they're outside of the bootstrapped app
+html, body {
+    display: flex;
+    flex-direction: column;
+
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+    height: 100%;
+}
