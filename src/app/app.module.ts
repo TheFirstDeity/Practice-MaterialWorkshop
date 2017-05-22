@@ -16,11 +16,11 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
     FormsModule,
     HttpModule,
+    MaterialModule,
     FlexLayoutModule,
-    MaterialModule
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

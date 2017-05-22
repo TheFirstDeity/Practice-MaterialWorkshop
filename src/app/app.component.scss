@@ -1,0 +1,9 @@
+:host {
+    display: flex;
+    flex: 1;
+}
+
+// Material components don't have default sizes, so it's best to specify them
+md-sidenav {
+    width: 320px;
+}
