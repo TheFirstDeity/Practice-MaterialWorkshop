@@ -1,4 +1,4 @@
-import 'hammerjs';
+import 'hammerjs'; // required for animations
 
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';

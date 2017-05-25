@@ -1,0 +1,11 @@
+// the _ prefix in SASS means this is a "partial", and must be included
+@import '~@angular/material/_theming';
+
+@include mat-core(); // compile core stuff into here
+
+$primary: mat-palette($mat-red);
+$accent: mat-palette($mat-blue);
+
+$theme: mat-light-theme($primary, $accent);
+
+@include angular-material-theme($theme);
