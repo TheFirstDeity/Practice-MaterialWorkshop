@@ -1,12 +1,20 @@
-<div fxLayout="column" fxFlex>
+<div fxLayout="column" fxFlex [class.dark-theme]="isDarkTheme">
 
   <md-toolbar color="primary">
     <span>{{title}}</span>
+
+    <!-- filler, pushes everything after it to the end -->
+    <span fxFlex></span>
+
+    <button md-icon-button [mdMenuTriggerFor]="themeMenu">
+      <md-icon>more_vert</md-icon>
+    </button>
   </md-toolbar>
 
-  <md-sidenav-container fxFlex>
-    <md-sidenav mode="side" opened>
+  <!-- fxLayout="row" appears to have no affect here -->
+  <md-sidenav-container fxFlex fxLayout="row">
 
+    <md-sidenav mode="side" opened>
       <md-tab-group>
         <md-tab label="Users">
           <md-nav-list>
@@ -20,8 +28,8 @@
           <span>Settings</span>
         </md-tab>
       </md-tab-group>
-
     </md-sidenav>
+
     <div class="content" fxLayout="column" fxLayout.sm="row" fxLayoutGap="16px">
       <md-card fxFlex="80">
         <md-icon svgIcon="avatars:{{selectedUser.avatar}}" class="avatar"></md-icon>
@@ -35,5 +43,9 @@
       </md-card>
     </div>
   </md-sidenav-container>
+
+  <md-menu #themeMenu x-position="before">
+    <button md-menu-item (click)="isDarkTheme = !isDarkTheme">Toggle Theme</button>
+  </md-menu>
 
 </div>

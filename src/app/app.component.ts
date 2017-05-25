@@ -15,6 +15,7 @@ export class AppComponent {
   }
 
   title = 'app works!';
+  isDarkTheme = false;
   users = [
     {
       name: 'Lia Lugo',
