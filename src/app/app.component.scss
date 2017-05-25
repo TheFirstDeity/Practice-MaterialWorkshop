@@ -7,3 +7,21 @@
 md-sidenav {
     width: 320px;
 }
+
+// border-radius makes it rounded, combine with hidden overflow to make it a circle picture
+.avatar {
+    overflow: hidden;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin: 12px;
+}
+
+.content {
+    padding: 12px;
+}
+
+// workaround for syntax error with '/deep/' selector
+#{"/deep/"} .mat-list-item-content {
+    height: auto !important;
+}
