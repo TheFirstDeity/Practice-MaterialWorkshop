@@ -9,10 +9,16 @@ import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DialogComponent
+  ],
+  entryComponents: [
+    // compiles the component, allows it to opened with "dialog.open(DialogComponent);" from an instance of MdDialog
+    DialogComponent
   ],
   imports: [
     BrowserModule,

@@ -23,5 +23,11 @@ md-sidenav {
 
 // workaround for syntax error with '/deep/' selector
 #{"/deep/"} .mat-list-item-content {
-    height: auto !important;
+    height: auto !important; // size to content
+}
+
+.fab-bottom-right {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
 }

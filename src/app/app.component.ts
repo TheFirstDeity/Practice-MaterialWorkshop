@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { MdIconRegistry } from '@angular/material';
+import { MdIconRegistry, MdDialog } from '@angular/material';
+
+import { DialogComponent } from './dialog/dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +10,7 @@ import { MdIconRegistry } from '@angular/material';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(iconRegistry: MdIconRegistry, sanitizer: DomSanitizer) {
+  constructor(private dialog: MdDialog, iconRegistry: MdIconRegistry, sanitizer: DomSanitizer) {
     const trustedAvatarUrl = sanitizer.bypassSecurityTrustResourceUrl('./assets/avatars.svg');
 
     iconRegistry.addSvgIconSetInNamespace('avatars', trustedAvatarUrl);
@@ -79,4 +81,8 @@ export class AppComponent {
   ];
 
   selectedUser = this.users[0];
+
+  private openAdminDialog() {
+    this.dialog.open(DialogComponent);
+  }
 }
