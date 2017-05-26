@@ -9,7 +9,7 @@ md-sidenav {
 }
 
 // border-radius makes it rounded, combine with hidden overflow to make it a circle picture
-.avatar {
+#{"/deep/"} md-icon.avatar { // deep is needed to set styles in the dialog
     overflow: hidden;
     width: 64px;
     height: 64px;

@@ -1,6 +1,6 @@
 # MaterialWorkshop
 
-From tutorial [Material 2 Start](https://github.com/EladBezalel/material2-start) using [Angular Material](https://github.com/angular/material2) Beta 5, with [Flex-Layout](https://github.com/angular/flex-layout).
+From [video](https://www.youtube.com/watch?v=8hIBy2VCUSc) tutorial [Material 2 Start](https://github.com/EladBezalel/material2-start) using [Angular Material](https://github.com/angular/material2) Beta 5, with [Flex-Layout](https://github.com/angular/flex-layout).
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.4.
 
@@ -17,3 +17,4 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ## Notes
 - Remember to style sizes on Material components, they're not really designed with defaults
 - Use `#{"/deep/"}` instead of `/deep/` to work around the SCSS syntax error, as described in [this comment](https://github.com/Microsoft/vscode/issues/7002#issuecomment-289137531). (Reason: `/deep/` is being depricated for different syntax, so editor support shouldn't be expected.)
+- `entryComponents` in an `NgModule` are for components that are rendered dynamically, like with `dialog.open(DialogComponent);`
